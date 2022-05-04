@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    
+    <title>Vándor Autók</title>
+
+</head>
+<body>
+   <header id="home">
+       <nav class="menu">
+           <input type="checkbox" name="hamburger" id="menu-toggle">
+           <label for="menu-toggle" class="hamburger-button">
+               <span class="hamburger-lines"></span>
+           </label>
+            <div class="nav-div">
+                <ul class="nav-ul nav-ul-media">
+                    <li class="nav-links"><a href="#home">Vándor Autók </a></li>
+                    <li class="nav-links"><a href="#szolgaltatasok">Szolgáltatások</a></li>
+                    <li class="nav-links"><a href="#rolunk">Rólunk</a></li>
+                    <li class="nav-links"><a href="#kapcsolat">Kapcsolat </a></li>
+                </ul>
+            </div>
+            <div class="nav-text">
+                <h1>Gyűjtő Autószállítás</h1>
+                <p>Nemzetközi gyűjtő autószállítás kamionnal heti rendszerességgel Európából.</p>
+                <div class="btn-nav">
+                    <button class="btn-e" ><a href="#kapcsolat">Érdekel</a></button>
+                </div>
+            </div>
+       </nav>
+   </header>
+   <main>
+        <section class="service" id="szolgaltatasok">
+            <h2>Szolgáltatások</h2>
+            <div class="service-center">
+                <div class="service-imges">
+                    <div class="service-img">
+                        <a href="#kapcsolat">
+                            <img src="./Imags/nemzet_autoszall.jpg" class="asd" alt="autoszallitas">
+                        
+                        <div class="layer">
+                            <p>Nemzetközi autószállítás</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="service-img">
+                        <a href="#kapcsolat">
+                            <img src="./Imags/gepszallitas.jpg" alt="gepszallitas">
+                        
+                        <div class="layer">
+                            <p>Gépek szállítása</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="service-img">
+                        <a href="#kapcsolat">
+                            <img src="./Imags/automentes.jpg" alt="automentes">
+                        
+                        <div class="layer">
+                            <p>Autómentés</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="rolunk">
+            <h2>Rólunk</h2>
+            <div class="about-text1">
+                <p>Külföldön vásárolt autót és nem tudja, hogy juttassa haza?</p>
+                <p>Vagy Magyarországról szeretne autót külföldre szállíttatni?</p>
+                <p>Akkor nálunk a legjobb helyen jár!</p>
+                <p>Cégünk azon dolgozik nap, mint nap, hogy ezeknek a feladatoknak a megoldásában segítsen Önnek!</p>
+            </div>  
+            <div class="about-text2">
+                <p>Ha személyesen beszélnél vagy találkoznál velünk, akkor az alábbi elérhetőségeink egyikén talál meg minket:</p>
+                <p class="text-color">Tel: +381 19293949</p>
+                <p class="text-color">Helyileg: Budapest, Kossuth Lajos tér 1-3, 1055</p>
+                <img src="./Imags/map.png" alt="map">
+            </div>
+        </section>
+        <section class="contact" id="kapcsolat">
+            <h2>Kapcsolat</h2>
+            <form action="#" method="POST">
+                <label>Név
+                    <input 
+                        type="text" 
+                        class="form-input" 
+                        name="nev" 
+                        placeholder="Név"/>
+                </label>
+                <label>Email    
+                    <input 
+                        type="email" 
+                        class="form-input" 
+                        name="email" 
+                        placeholder="Email"/>
+                </label>
+                <label>Telefonszám    
+                    <input 
+                        type="number" 
+                        class="form-input form-input-number" 
+                        name="telefonszám" 
+                        placeholder="Telefonszám "/>
+                </label>
+                <label>Autó adatok 
+                    <input 
+                        type="text" 
+                        class="form-input" 
+                        name="auto_adatok" 
+                        placeholder="Tipús,súly"/>
+                </label>
+                <label>Honnan-Hová? 
+                    <input 
+                        type="text" 
+                        class="form-input" 
+                        name="honnan-hova" 
+                        placeholder="Pontos felrakó és lerakó"/>
+                </label>
+                <label>Üzenet 
+                    <textarea 
+                        type="text" 
+                        class="form-input" 
+                        name="uzenet" 
+                        placeholder="Üzenet"
+                    ></textarea>
+                </label>
+                <button type="submit" class="btn-e btn-submit">Elküld</button>
+            </form>
+        </section>
+   </main>
+   <footer>
+            <ul class="social">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        © Copyright 2021 VandórAutok.hu Minden jog fenntartva.
+   </footer>
+</body>
+</html>

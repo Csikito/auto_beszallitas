@@ -1,0 +1,441 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color-w: whitesmoke;
+    --text-color-o: rgb(255, 70, 0);
+    --background-color-1:rgb(4,9,30);
+    --background-color-2:rgb(255, 70, 0);
+    --text-shadow:rgb(255, 70, 0);
+    --text-h1: 6.5rem;
+    --text-large: 3rem;
+    --text-medium:2.5rem;
+    --text-small:2rem;
+
+}
+
+
+html{
+    font-family: 'Paytone One', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size:var(--text-h1);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px  rgb(255, 70, 0),-1px -1px 1px  rgb(255, 70, 0);
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: var(--text-large);
+    color: var(--text-color-w);
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 25px 0;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+p{
+    text-align: center;
+    font-size: var(--text-medium);
+    color: var(--text-color-w);
+}
+
+a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--text-color-w); 
+}
+
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(4,9,30,1),rgb(4,9,30,.6),rgb(4,9,30,.6), rgb(4,9,30,1)), url(../Imags/cover.jpg);
+    background-position: center;
+    background-size: cover;
+   
+}
+#menu-toggle {
+    visibility: hidden ;
+  }
+  
+.hamburger-button {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+.hamburger-lines,
+.hamburger-lines::before,
+.hamburger-lines::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition-duration: 0.9s;
+  }
+  
+.hamburger-lines::after {
+    content: "";
+    top: 10px;
+  }
+.hamburger-lines::before {
+    content: "";
+    top: -10px;
+  }
+
+.nav-ul {
+    display: block;
+    position: fixed;
+    padding: 120px 20px;
+    margin: 0;
+    width: 250px;
+    height: 50%;
+    background-color: var(--background-color-1);
+    top: 0;
+    list-style: none;
+    visibility: hidden;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.7);
+    /*átmenet*/
+    right: -250px;
+    transition-duration: 0.5s;
+    z-index: 1;
+  }
+
+#menu-toggle:checked ~.nav-div .nav-ul {
+    visibility: visible;
+    right: 0;
+    
+  }
+#menu-toggle:checked ~ .hamburger-button .hamburger-lines {
+    background-color: white;
+    transform: rotate(45deg);
+  }
+  
+#menu-toggle:checked ~ .hamburger-button .hamburger-lines::before {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+  
+#menu-toggle:checked ~ .hamburger-button .hamburger-lines::after {
+    display: none;
+  }  
+
+
+.nav-links{
+    padding: 20px 10px;
+}
+
+.nav-links::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--background-color-2);
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+}
+
+.nav-links:hover:after {
+    width: 100%;
+}
+
+.nav-links a:hover{
+    text-shadow: -1px -1px 3px var(--text-shadow);
+    transition: 0.5s;
+}
+
+.nav-text{
+    color: var(--text-color-w);
+    position: absolute;
+    top: 55vh;
+    left: 10vh;
+    
+}
+
+.btn-nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn-e{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--text-color-o);
+    border: 2px solid rgb(255, 70, 0);
+    border-radius: 5%;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-e:hover{
+    background-color: var(--background-color-2);
+    color:var(--text-color-w);
+    border: 2px solid whitesmoke;
+    box-shadow: 0 0 20px 3px rgb(255, 70, 0);
+    transition: 0.6s;
+}
+
+
+/***************Szolgáltatások*****************/
+
+.main{
+    background-color:var(--background-color-1) ;
+}
+
+.service{
+    
+    padding: 30px 0;
+    background-color:var(--background-color-1) ;
+
+}
+.service-center{
+    display: flex;
+    justify-content: center;
+}
+
+.service-imges{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;   
+}
+
+.service-img{
+    flex-basis: 32%;
+    position: relative;
+    margin-bottom: 30px;
+  
+}
+
+.service-img img{
+    width: 99%;
+    height: 99%;
+    border-radius: 5%;
+    
+   
+    
+}
+
+.layer:hover{ 
+    background:rgba(0, 0, 0, 0.8);
+    border:2px solid rgb(255, 70, 0);
+    box-shadow: 1px 1px 10px rgb(255, 70, 0), -1px -1px 10px rgb(255, 70, 0);;
+   
+ 
+}
+
+
+.layer{ 
+    background:transparent;
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    top: 0;
+    border-radius: 5%;
+    transition: 0.5s;
+    cursor: pointer;
+ 
+}
+
+
+.layer p{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform:translateX(-50%);
+    opacity: 0;
+    
+}
+
+.layer:hover p{
+    
+    top: 50%;
+    transition: 1s;
+    color: rgb(255, 70, 0);
+    text-shadow: 1px 1px 1px rgb(80,80,80),-1px -1px 1px whitesmoke;
+    opacity: 1;
+
+    
+} 
+
+/**********Róulunk**********/
+
+.about{
+    
+    background-color:rgb(4,9,30) ;
+    
+
+}
+
+.about-text1{
+    font-size: 2.5rem;
+    color: var(--text-color-w);
+    text-align: center;
+    padding: 20px;
+}
+
+.about-text1 p{
+    padding: 5px;
+}
+
+.about-text2{
+    font-size: 2.5rem;
+    color: var(--text-color-w);
+    text-align: center;
+    padding: 30px;
+}
+
+.about-text2 p{
+    padding: 5px;
+}
+.about-text2 img{
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.text-color{
+    color: var(--text-color-o);
+}
+
+/**********Kapcsolat**********/
+.contact{
+    
+    background-color: var(--background-color-1);  
+}
+
+form{
+    width: 99%;
+    font-size: 2.5rem;
+    color: var(--text-color-w);
+    background-image:linear-gradient(rgb(0, 0, 0, 0.85), rgb(0, 0, 0, 0.85)),
+    url(/Imags/contact.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10%;
+    box-shadow: 10px 10px 100px 100px rgb(4,9,30) inset,-10px -10px 100px 100px rgb(4,9,30) inset;
+    margin: 0 auto;
+    padding: 50px 30px;
+
+}
+
+.form-input{
+    font-size: 2rem;
+    border:none;
+    background:none;
+    color: var(--text-color-w);
+    border-bottom:2px solid rgb(255, 70, 0);
+    width: 100%;
+    padding: 15px 0;
+
+}
+
+textarea.form-input{
+    border:2px solid rgb(255, 70, 0);
+    height: 200px;
+    overflow: hidden;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.btn-submit{
+    margin: 20px 45% 0 45%; 
+}
+
+footer{
+
+    background-color:var(--background-color-1) ;
+    color: var(--text-color-w);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    letter-spacing: 1px;
+
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    width: 500px;
+    
+}
+
+i{
+    color: var(--text-color-w);
+    font-size: 4rem;
+    margin-bottom: 20px;   
+}
+
+i:hover{
+    text-shadow: 1px 1px 2px rgb(255, 70, 0),
+    2px 2px 4px rgb(255, 70, 0);
+}
+
+@media screen and (min-width: 835px)
+{
+    .hamburger-button{
+        visibility: hidden;
+    }
+    
+    .nav-div{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .nav-ul{
+            visibility: visible;
+            display:flex ;
+            justify-content: space-around;
+            width: 99%;
+            margin: 30px 0px;
+            list-style: none;
+            position:static;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 0 0 2px var(--background-color-2);
+            background: transparent;      
+    }
+    .nav-text{
+        font-size: var(--text-large);
+        color: var(--text-color-w);
+        position: absolute;
+        top: 65vh;
+        left: 30vh;
+        
+    }
+
+    .btn-nav{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+
+    form{
+        width: 99%;
+        padding: 50px 150px;
+    }
+
+
+
+}
